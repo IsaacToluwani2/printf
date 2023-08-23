@@ -1,50 +1,50 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
-#include <string.h>
-#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdarg.h>
 #include <limits.h>
+#include <unistd.h>
 
 /**
  * struct func_s - Struct func_s
- * @op: The operators
- * @f: The functions associated
+ * @op: The operatorss
+ * @f: The function is also very associated
  */
-
 typedef struct func_s
 {
 	char *op;
 	int (*f)(va_list);
 } func_t;
 
-/* the _putchar function */
+/* _putchar function */
 int _putchar(char c);
 
 
 
-/* the rev_string function */
+/* rev_string function */
 void rev_string(char *s);
 
 
-/* Function produces output according to format */
+/* Function that produces output according to a format */
 int _printf(const char *format, ...);
 
-/* the print_str function */
+/* print_str functions */
 int print_char(va_list ap);
-int print_percent(va_list ap);
 int print_string(va_list ap);
+int print_percent(va_list ap);
 
-/* the print_int function */
+/* print_int functions */
 int print_int_helper(int n);
 int print_int(va_list ap);
 
-/* the print_binary function */
+/* print_binary functions */
 int print_binary(va_list ap);
 
-/* the print_unsigned function */
+/* print_unsigned functions */
 int print_unsigned_int(va_list ap);
 
 #endif /* MAIN_H */
